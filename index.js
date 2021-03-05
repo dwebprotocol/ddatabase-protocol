@@ -1,5 +1,5 @@
-const SHP = require('simple-hypercore-protocol')
-const crypto = require('hypercore-crypto')
+const SDP = require('@ddatabase/simple-protocol')
+const crypto = require('@ddatabase/crypto')
 const timeout = require('timeout-refresh')
 const inspect = require('inspect-custom-symbol')
 const Nanoguard = require('nanoguard')
@@ -342,7 +342,7 @@ module.exports = class ProtocolStream extends Duplex {
       noise: handlers.noise,
       keyPair: handlers.keyPair
     })
-    this.state = new SHP(initiator, this.channelizer)
+    this.state = new SDP(initiator, this.channelizer)
     this.live = !!handlers.live
     this.timeout = null
     this.keepAlive = null
@@ -375,7 +375,7 @@ module.exports = class ProtocolStream extends Duplex {
       while (indent.length < opts.indentationLvl) indent += ' '
     }
 
-    return 'HypercoreProtocolStream(\n' +
+    return 'DDatabaseProtocolStream(\n' +
       indent + '  publicKey: ' + opts.stylize((this.publicKey && pretty(this.publicKey)), 'string') + '\n' +
       indent + '  remotePublicKey: ' + opts.stylize((this.remotePublicKey && pretty(this.remotePublicKey)), 'string') + '\n' +
       indent + '  remoteAddress: ' + opts.stylize(this.remoteAddress, 'string') + '\n' +
@@ -395,7 +395,7 @@ module.exports = class ProtocolStream extends Duplex {
   }
 
   static keyPair (seed) {
-    return SHP.keyPair(seed)
+    return SDP.keyPair(seed)
   }
 
   get remoteAddress () {
