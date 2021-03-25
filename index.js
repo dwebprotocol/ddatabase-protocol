@@ -6,7 +6,7 @@ const Nanoguard = require('nanoguard')
 const pretty = require('pretty-hash')
 const Message = require('abstract-extension')
 const { Duplex } = require('streamx')
-const debug = require('debug')('hypercore-protocol')
+const debug = require('debug')('@ddatabase/protocol')
 
 class StreamExtension extends Message {
   send (message) {
