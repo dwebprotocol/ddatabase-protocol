@@ -1,0 +1,36 @@
+{
+  "name": "@ddatabase/protocol",
+  "version": "1.0.0-dswarm_proxy_Branch",
+  "description": "Stream-based implementation of the dDatabase protocol.",
+  "main": "index.js",
+  "dependencies": {
+    "buffer-alloc-unsafe": "^1.0.0",
+    "buffer-from": "^1.0.0",
+    "inherits": "^2.0.3",
+    "protocol-buffers-encodings": "^1.1.0",
+    "readable-stream": "^2.2.6",
+    "sodium-universal": "^2.0.0",
+    "sorted-indexof": "^1.0.0",
+    "varint": "^5.0.0"
+  },
+  "devDependencies": {
+    "choppa": "^1.0.2",
+    "protocol-buffers": "^4.0.2",
+    "standard": "^9.0.1",
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "test": "standard && tape test.js",
+    "protobuf": "protocol-buffers schema.proto -o messages.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwebprotocol/ddatabase-protocol.git"
+  },
+  "author": "Peeps (@dweb)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dwebprotocol/ddatabase-protocol/issues"
+  },
+  "homepage": "https://dwebx.org"
+}
