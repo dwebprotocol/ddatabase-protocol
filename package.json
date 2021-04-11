@@ -1,6 +1,6 @@
 {
   "name": "@ddatabase/protocol",
-  "version": "1.0.0-dswarm_proxy_Branch",
+  "version": "1.0.0",
   "description": "Stream-based implementation of the dDatabase protocol.",
   "main": "index.js",
   "dependencies": {
